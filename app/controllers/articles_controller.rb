@@ -38,8 +38,8 @@ end
 def destroy
   @article = Article.find(params[:id])
   flash.notice = "Article '#{@article.title}' Destroyed!"
-  redirect_to "http://localhost:3000/articles"
   @article.destroy
+  redirect_to "http://localhost:3000/articles"
 end
 
 end
